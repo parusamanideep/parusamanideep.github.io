@@ -1,209 +1,262 @@
-<!DOCTYPE HTML>
-<!--
-	Hyperspace by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Manideep Parusha</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Manideep Parusha · Electronics & 5G</title>
+  <meta name="description" content="Manideep Parusha — electronics design and 5G wireless engineer. Experience at IIT Hyderabad and Retron Energies." />
+  <meta name="theme-color" content="#05070d" />
+  <meta property="og:title" content="Manideep Parusha · Electronics & 5G" />
+  <meta property="og:description" content="Electronics design, embedded systems and 5G wireless communication." />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2305070d'/%3E%3Cpath d='M4 16h5l3-8 4 16 4-12 2 4h6' fill='none' stroke='%2300e5ff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="cursor" aria-hidden="true"><span class="cursor-dot"></span><span class="cursor-ring"></span></div>
+  <div class="scroll-progress" aria-hidden="true"></div>
 
-		<!-- Sidebar -->
-			<section id="sidebar">
-				<div class="inner">
-					<nav>
-						<ul>
-							<li><a href="#intro">Welcome</a></li>
-							<li><a href="#one">Who I am</a></li>
-							<li><a href="#two">What I do</a></li>
-							<li><a href="#three">Get in touch</a></li>
-						</ul>
-					</nav>
-				</div>
-			</section>
+  <!-- Boot loader -->
+  <div class="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <pre class="loader-log"></pre>
+      <div class="loader-bar"><span></span></div>
+    </div>
+  </div>
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+  <header class="nav">
+    <a href="#top" class="brand" aria-label="Home">
+      <svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><path d="M3 16h6l3-8 4 16 4-12 2 4h7" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span>MP<span class="accent">.</span></span>
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#about" data-num="01">About</a></li>
+        <li><a href="#experience" data-num="02">Experience</a></li>
+        <li><a href="#expertise" data-num="03">Expertise</a></li>
+        <li><a href="#lab" data-num="04">Signal Lab</a></li>
+        <li><a href="#contact" data-num="05">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span></button>
+  </header>
 
-				<!-- Intro -->
-					<section id="intro" class="wrapper style1 fullscreen fade-up">
-						<div class="inner">
-							<h1>Hey! I'm Manideep Parusha</h1>
-							<p>Welcome to my space.
-							You can find more of my works  <a href="http://github.com/parusamanideep">here</a>.</p>
-							<ul class="actions">
-								<li><a href="#one" class="button scrolly">Explore more</a></li>
-							</ul>
-						</div>
-					</section>
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <canvas id="pcb" aria-hidden="true"></canvas>
+      <div class="hero-content">
+        <p class="eyebrow mono"><span class="blink">●</span> SYSTEM ONLINE · HYDERABAD, IN</p>
+        <h1 class="hero-title">
+          <span class="line"><span class="scramble" data-text="Manideep">Manideep</span></span>
+          <span class="line outline"><span class="scramble" data-text="Parusha">Parusha</span></span>
+        </h1>
+        <p class="hero-role mono">&gt; <span class="typed"></span><span class="caret">_</span></p>
+        <p class="hero-sub">I design the hardware and wireless links that let devices talk — from schematic and PCB to 5G radio signals.</p>
+        <div class="hero-cta">
+          <a href="#experience" class="btn btn-primary magnetic"><span>View my work</span></a>
+          <a href="https://github.com/parusamanideep" target="_blank" rel="noopener" class="btn btn-ghost magnetic"><span>GitHub ↗</span></a>
+        </div>
+      </div>
+      <div class="hero-scope" aria-hidden="true">
+        <div class="scope-head mono"><span>CH1 · 3.5 GHz n78</span><span class="scope-live">LIVE</span></div>
+        <canvas id="scope"></canvas>
+        <div class="scope-foot mono"><span>5 ms/div</span><span>200 mV/div</span></div>
+      </div>
+      <a href="#about" class="scroll-hint mono" aria-label="Scroll down"><span>scroll</span><i></i></a>
+    </section>
 
-				<!-- One -->
-					<section id="one" class="wrapper style2 spotlights">
-						<section>
-							<a href="#" class="image"><img src="images/pic01.jpg" alt="" data-position="center center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>5G project Intern @ IIT Hyderabad</h2>
-									<p>Great working experience</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="images/pic02.jpg" alt="" data-position="top center" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>Electronics Design Intern @ Retron Energies Pvt. Ltd.</h2>
-									<p>I believe this oppourtunity to be a turning point in my career.</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-						<section>
-							<a href="#" class="image"><img src="images/pic03.jpg" alt="" data-position="25% 25%" /></a>
-							<div class="content">
-								<div class="inner">
-									<h2>UG student @ B V Raju Institute of Technology</h2>
-									<p>The time flew really fast!</p>
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn more</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-					</section>
+    <!-- MARQUEE -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track mono">
+        <span>5G NR</span><span>✦</span><span>PCB Design</span><span>✦</span><span>Embedded Systems</span><span>✦</span><span>RF & Antennas</span><span>✦</span><span>Signal Processing</span><span>✦</span><span>Power Electronics</span><span>✦</span><span>IoT</span><span>✦</span>
+        <span>5G NR</span><span>✦</span><span>PCB Design</span><span>✦</span><span>Embedded Systems</span><span>✦</span><span>RF & Antennas</span><span>✦</span><span>Signal Processing</span><span>✦</span><span>Power Electronics</span><span>✦</span><span>IoT</span><span>✦</span>
+      </div>
+    </div>
 
-				<!-- Two -->
-					<section id="two" class="wrapper style3 fade-up">
-						<div class="inner">
-							<h2>What we do</h2>
-							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
-							<div class="features">
-								<section>
-									<span class="icon solid major fa-code"></span>
-									<h3>Lorem ipsum amet</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-lock"></span>
-									<h3>Aliquam sed nullam</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-cog"></span>
-									<h3>Sed erat ullam corper</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-desktop"></span>
-									<h3>Veroeros quis lorem</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon solid major fa-link"></span>
-									<h3>Urna quis bibendum</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-								<section>
-									<span class="icon major fa-gem"></span>
-									<h3>Aliquam urna dapibus</h3>
-									<p>Phasellus convallis elit id ullam corper amet et pulvinar. Duis aliquam turpis mauris, sed ultricies erat dapibus.</p>
-								</section>
-							</div>
-							<ul class="actions">
-								<li><a href="generic.html" class="button">Learn more</a></li>
-							</ul>
-						</div>
-					</section>
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <h2 class="section-title reveal"><span class="mono num">01</span> Who I am</h2>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p class="lead">I'm an <strong>Electronics &amp; Communication</strong> engineer from <strong>B V Raju Institute of Technology</strong>, drawn to the point where circuits meet the airwaves.</p>
+            <p>My internships took me from building <strong>5G wireless</strong> systems at <strong>IIT Hyderabad</strong> to designing real-world electronics at <strong>Retron Energies</strong>. I enjoy taking an idea all the way through — sketch, schematic, board, firmware, and the bench where it finally comes alive.</p>
+            <p>When I'm not probing a circuit, I'm exploring new ideas on <a href="https://github.com/parusamanideep" target="_blank" rel="noopener" class="link">GitHub</a>.</p>
+          </div>
+          <div class="signal-chain reveal" aria-label="My design flow: idea, schematic, PCB, firmware, test">
+            <p class="mono chain-label">// my design flow</p>
+            <ol class="chain">
+              <li><span class="chain-node">01</span><div><h4>Idea</h4><p>Requirements &amp; system block diagram</p></div></li>
+              <li><span class="chain-node">02</span><div><h4>Schematic</h4><p>Component selection &amp; circuit design</p></div></li>
+              <li><span class="chain-node">03</span><div><h4>PCB</h4><p>Layout, routing &amp; signal integrity</p></div></li>
+              <li><span class="chain-node">04</span><div><h4>Firmware</h4><p>Embedded code that drives the hardware</p></div></li>
+              <li><span class="chain-node">05</span><div><h4>Test</h4><p>Bench validation &amp; iteration</p></div></li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
 
-				<!-- Three -->
-					<section id="three" class="wrapper style1 fade-up">
-						<div class="inner">
-							<h2>Get in touch</h2>
-							<p>I'd love to build my network. Let's grow together!</p>
-							<div class="split style1">
-								<section>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="name">Name</label>
-												<input type="text" name="name" id="name" />
-											</div>
-											<div class="field half">
-												<label for="email">Email</label>
-												<input type="text" name="email" id="email" />
-											</div>
-											<div class="field">
-												<label for="message">Message</label>
-												<textarea name="message" id="message" rows="5"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><a href="" class="button submit">Send Message</a></li>
-										</ul>
-									</form>
-								</section>
-								<section>
-									<ul class="contact">
-										<li>
-											<h3>Address</h3>
-											<span>Patancheru<br />
-											Hyderabad, Telangana - 502319<br />
-											INDIA</span>
-										</li>
-										<li>
-											<h3>Email</h3>
-											<a href="#">parusamanideep@gmail.com</a>
-										</li>
-										<li>
-											<h3>Phone</h3>
-											<span>868-816-7334</span>
-										</li>
-										<li>
-											<h3>Social</h3>
-											<ul class="icons">
-												<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-												<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-												<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-												<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-												<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-											</ul>
-										</li>
-									</ul>
-								</section>
-							</div>
-						</div>
-					</section>
+    <!-- EXPERIENCE -->
+    <section id="experience" class="section">
+      <div class="container">
+        <h2 class="section-title reveal"><span class="mono num">02</span> Experience</h2>
+        <div class="timeline">
+          <div class="timeline-line"><span></span></div>
 
-			</div>
+          <article class="t-item reveal">
+            <div class="t-dot"></div>
+            <div class="card tilt">
+              <div class="card-glow"></div>
+              <p class="mono t-tag">INTERNSHIP · WIRELESS</p>
+              <h3>5G Project Intern</h3>
+              <p class="t-org">Indian Institute of Technology, Hyderabad</p>
+              <p>Worked on a 5G research project, getting hands-on with next-generation wireless communication — the physical layer, signal processing, and how radios move data at high speed and low latency.</p>
+              <ul class="chips"><li>5G NR</li><li>Wireless Comm.</li><li>Signal Processing</li><li>MATLAB</li></ul>
+            </div>
+          </article>
 
-		<!-- Footer -->
-			<footer id="footer" class="wrapper style1-alt">
-				<div class="inner">
-					<ul class="menu">
-						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="">MP</a></li>
-					</ul>
-				</div>
-			</footer>
+          <article class="t-item reveal">
+            <div class="t-dot"></div>
+            <div class="card tilt">
+              <div class="card-glow"></div>
+              <p class="mono t-tag">INTERNSHIP · HARDWARE</p>
+              <h3>Electronics Design Intern</h3>
+              <p class="t-org">Retron Energies Pvt. Ltd.</p>
+              <p>Designed and tested electronic circuits for energy products — a turning point that showed me how engineering decisions on the bench become products in the field.</p>
+              <ul class="chips"><li>Circuit Design</li><li>PCB Layout</li><li>Power Electronics</li><li>Testing</li></ul>
+            </div>
+          </article>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+          <article class="t-item reveal">
+            <div class="t-dot"></div>
+            <div class="card tilt">
+              <div class="card-glow"></div>
+              <p class="mono t-tag">EDUCATION</p>
+              <h3>B.Tech, Electronics &amp; Communication</h3>
+              <p class="t-org">B V Raju Institute of Technology</p>
+              <p>Built a foundation in analog &amp; digital electronics, communication systems, microcontrollers and electromagnetics. The time flew really fast!</p>
+              <ul class="chips"><li>Analog &amp; Digital</li><li>Microcontrollers</li><li>Communication Systems</li></ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-	</body>
+    <!-- EXPERTISE -->
+    <section id="expertise" class="section">
+      <div class="container">
+        <h2 class="section-title reveal"><span class="mono num">03</span> What I do</h2>
+        <div class="grid-cards">
+          <div class="feature spotlight reveal">
+            <svg class="f-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 30v12M16 42h16M24 30a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/><path class="wave w1" d="M15 17a13 13 0 0 1 18 0"/><path class="wave w2" d="M9 11a21 21 0 0 1 30 0"/></svg>
+            <h3>5G &amp; Wireless</h3>
+            <p>Physical-layer concepts, modulation schemes and radio links for next-gen networks.</p>
+          </div>
+          <div class="feature spotlight reveal">
+            <svg class="f-icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="8" width="32" height="32" rx="4"/><path d="M8 18h8l4-4h8M40 30h-8l-4 4h-8M18 40V30M30 8v10"/><circle cx="16" cy="18" r="2"/><circle cx="32" cy="30" r="2"/></svg>
+            <h3>PCB Design</h3>
+            <p>Schematic capture, multilayer layout, routing and design-for-manufacture.</p>
+          </div>
+          <div class="feature spotlight reveal">
+            <svg class="f-icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="14" y="14" width="20" height="20" rx="2"/><path d="M19 14V8M24 14V8M29 14V8M19 40v-6M24 40v-6M29 40v-6M14 19H8M14 24H8M14 29H8M40 19h-6M40 24h-6M40 29h-6"/></svg>
+            <h3>Embedded Systems</h3>
+            <p>Microcontroller firmware that reads sensors, drives actuators and talks over buses.</p>
+          </div>
+          <div class="feature spotlight reveal">
+            <svg class="f-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M4 24h6l4-12 6 24 6-18 4 10 3-4h11"/></svg>
+            <h3>Signal Processing</h3>
+            <p>Filtering, spectral analysis and simulation in MATLAB &amp; Python.</p>
+          </div>
+          <div class="feature spotlight reveal">
+            <svg class="f-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M27 4 12 27h11l-3 17 16-24H25l2-16Z"/></svg>
+            <h3>Power Electronics</h3>
+            <p>Converters and power stages for energy-efficient hardware.</p>
+          </div>
+          <div class="feature spotlight reveal">
+            <svg class="f-icon" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="5"/><circle cx="8" cy="10" r="3"/><circle cx="40" cy="10" r="3"/><circle cx="8" cy="38" r="3"/><circle cx="40" cy="38" r="3"/><path d="m10.5 12 9.5 8.5M37.5 12 28 20.5M10.5 36l9.5-8.5M37.5 36 28 27.5"/></svg>
+            <h3>IoT</h3>
+            <p>Connecting hardware to the cloud — sensing at the edge, insight in the network.</p>
+          </div>
+        </div>
+
+        <div class="toolbox reveal">
+          <p class="mono chain-label">// toolbox</p>
+          <div class="meters">
+            <div class="meter" data-level="85"><span>Circuit Design</span><div class="meter-bar"><i></i></div></div>
+            <div class="meter" data-level="80"><span>PCB Layout</span><div class="meter-bar"><i></i></div></div>
+            <div class="meter" data-level="78"><span>Wireless / 5G</span><div class="meter-bar"><i></i></div></div>
+            <div class="meter" data-level="75"><span>Embedded C</span><div class="meter-bar"><i></i></div></div>
+            <div class="meter" data-level="72"><span>MATLAB</span><div class="meter-bar"><i></i></div></div>
+            <div class="meter" data-level="70"><span>Python</span><div class="meter-bar"><i></i></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIGNAL LAB -->
+    <section id="lab" class="section">
+      <div class="container">
+        <h2 class="section-title reveal"><span class="mono num">04</span> Signal Lab</h2>
+        <p class="section-intro reveal">A tiny interactive demo of what 5G radios deal with every millisecond. Each dot is a received symbol on a <strong>QAM constellation</strong> — drag the noise up and watch the signal fall apart.</p>
+        <div class="lab reveal">
+          <div class="lab-screen">
+            <canvas id="constellation" aria-label="Animated QAM constellation diagram"></canvas>
+            <div class="lab-overlay mono"><span id="lab-mod">16-QAM</span><span id="lab-snr">SNR 24 dB</span></div>
+          </div>
+          <div class="lab-controls">
+            <div class="control">
+              <span class="label mono" id="mod-label">Modulation</span>
+              <div class="seg" role="radiogroup" id="mod" aria-labelledby="mod-label">
+                <button role="radio" aria-checked="false" data-m="4">QPSK</button>
+                <button role="radio" aria-checked="true" data-m="16" class="on">16-QAM</button>
+                <button role="radio" aria-checked="false" data-m="64">64-QAM</button>
+              </div>
+            </div>
+            <div class="control">
+              <label class="mono" for="snr">Noise level · <span id="snr-val">24 dB SNR</span></label>
+              <input type="range" id="snr" min="4" max="36" value="24" />
+            </div>
+            <div class="stats">
+              <div><span class="mono">bits / symbol</span><strong id="bps">4</strong></div>
+              <div><span class="mono">est. symbol errors</span><strong id="ser">0.0%</strong></div>
+            </div>
+            <p class="lab-note">Higher-order QAM packs more bits into each symbol — that's how 5G hits gigabit speeds — but it needs a cleaner channel. Good hardware design is what keeps the noise down.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2 class="section-title reveal"><span class="mono num">05</span> Get in touch</h2>
+        <div class="contact-box reveal">
+          <p class="contact-kicker mono">// open a channel</p>
+          <h3 class="contact-big">Let's build <span class="grad">something</span> together.</h3>
+          <p>I'd love to grow my network — whether it's a role, a project, or just a conversation about hardware and wireless.</p>
+          <div class="contact-actions">
+            <a href="mailto:parusamanideep@gmail.com" class="btn btn-primary magnetic"><span>parusamanideep@gmail.com</span></a>
+            <button class="btn btn-ghost magnetic copy-email" data-email="parusamanideep@gmail.com"><span>Copy email</span></button>
+          </div>
+          <ul class="contact-meta mono">
+            <li><span>LOC</span> Patancheru, Hyderabad, Telangana · India</li>
+            <li><span>GIT</span> <a href="https://github.com/parusamanideep" target="_blank" rel="noopener">github.com/parusamanideep</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer mono">
+    <p>© <span id="year"></span> Manideep Parusha</p>
+    <p>Designed &amp; built by MP · <a href="#top">Back to top ↑</a></p>
+  </footer>
+
+  <div class="toast mono" role="status" aria-live="polite"></div>
+  <script src="assets/js/app.js"></script>
+</body>
 </html>
