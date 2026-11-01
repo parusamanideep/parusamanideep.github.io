@@ -3,11 +3,11 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Manideep Parusha · Electronics & 5G</title>
-  <meta name="description" content="Manideep Parusha — electronics design and 5G wireless engineer. Experience at IIT Hyderabad and Retron Energies." />
+  <title>Manideep Parusha · Ground Station & RF Engineer</title>
+  <meta name="description" content="Manideep Parusha — satellite ground segment systems engineer at Dhruva Space. RF engineering, SDR, CCSDS TT&C and DVB-S2 downlinks." />
   <meta name="theme-color" content="#05070d" />
-  <meta property="og:title" content="Manideep Parusha · Electronics & 5G" />
-  <meta property="og:description" content="Electronics design, embedded systems and 5G wireless communication." />
+  <meta property="og:title" content="Manideep Parusha · Ground Station & RF Engineer" />
+  <meta property="og:description" content="Satellite communication systems, RF engineering and SDR technology — connecting space and Earth." />
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2305070d'/%3E%3Cpath d='M4 16h5l3-8 4 16 4-12 2 4h6' fill='none' stroke='%2300e5ff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -48,22 +48,23 @@
     <section class="hero">
       <canvas id="pcb" aria-hidden="true"></canvas>
       <div class="hero-content">
-        <p class="eyebrow mono"><span class="blink">●</span> SYSTEM ONLINE · HYDERABAD, IN</p>
+        <p class="eyebrow mono"><span class="blink">●</span> AOS · LINK ACQUIRED · HYDERABAD, IN</p>
         <h1 class="hero-title">
           <span class="line"><span class="scramble" data-text="Manideep">Manideep</span></span>
           <span class="line outline"><span class="scramble" data-text="Parusha">Parusha</span></span>
         </h1>
         <p class="hero-role mono">&gt; <span class="typed"></span><span class="caret">_</span></p>
-        <p class="hero-sub">I design the hardware and wireless links that let devices talk — from schematic and PCB to 5G radio signals.</p>
+        <p class="hero-sub">I build the ground stations that talk to satellites — SDR modems, RF links and tracking antennas that connect space and Earth.</p>
         <div class="hero-cta">
           <a href="#experience" class="btn btn-primary magnetic"><span>View my work</span></a>
+          <a href="https://www.linkedin.com/in/manideep-parusha" target="_blank" rel="noopener" class="btn btn-ghost magnetic"><span>LinkedIn ↗</span></a>
           <a href="https://github.com/parusamanideep" target="_blank" rel="noopener" class="btn btn-ghost magnetic"><span>GitHub ↗</span></a>
         </div>
       </div>
       <div class="hero-scope" aria-hidden="true">
-        <div class="scope-head mono"><span>CH1 · 3.5 GHz n78</span><span class="scope-live">LIVE</span></div>
+        <div class="scope-head mono"><span>CH1 · S-BAND TT&amp;C</span><span class="scope-live">LIVE</span></div>
         <canvas id="scope"></canvas>
-        <div class="scope-foot mono"><span>5 ms/div</span><span>200 mV/div</span></div>
+        <div class="scope-foot mono"><span>LEO pass · EL 42°</span><span>Eb/N0 12 dB</span></div>
       </div>
       <a href="#about" class="scroll-hint mono" aria-label="Scroll down"><span>scroll</span><i></i></a>
     </section>
@@ -71,8 +72,8 @@
     <!-- MARQUEE -->
     <div class="marquee" aria-hidden="true">
       <div class="marquee-track mono">
-        <span>5G NR</span><span>✦</span><span>PCB Design</span><span>✦</span><span>Embedded Systems</span><span>✦</span><span>RF & Antennas</span><span>✦</span><span>Signal Processing</span><span>✦</span><span>Power Electronics</span><span>✦</span><span>IoT</span><span>✦</span>
-        <span>5G NR</span><span>✦</span><span>PCB Design</span><span>✦</span><span>Embedded Systems</span><span>✦</span><span>RF & Antennas</span><span>✦</span><span>Signal Processing</span><span>✦</span><span>Power Electronics</span><span>✦</span><span>IoT</span><span>✦</span>
+        <span>Satellite Communication</span><span>✦</span><span>Ground Segment</span><span>✦</span><span>SDR · GNU Radio</span><span>✦</span><span>CCSDS TT&amp;C</span><span>✦</span><span>DVB-S2</span><span>✦</span><span>RF Link Budget</span><span>✦</span><span>Antennas &amp; Tracking</span><span>✦</span><span>Systems Engineering</span><span>✦</span>
+        <span>Satellite Communication</span><span>✦</span><span>Ground Segment</span><span>✦</span><span>SDR · GNU Radio</span><span>✦</span><span>CCSDS TT&amp;C</span><span>✦</span><span>DVB-S2</span><span>✦</span><span>RF Link Budget</span><span>✦</span><span>Antennas &amp; Tracking</span><span>✦</span><span>Systems Engineering</span><span>✦</span>
       </div>
     </div>
 
@@ -82,18 +83,23 @@
         <h2 class="section-title reveal"><span class="mono num">01</span> Who I am</h2>
         <div class="about-grid">
           <div class="about-text reveal">
-            <p class="lead">I'm an <strong>Electronics &amp; Communication</strong> engineer from <strong>B V Raju Institute of Technology</strong>, drawn to the point where circuits meet the airwaves.</p>
-            <p>My internships took me from building <strong>5G wireless</strong> systems at <strong>IIT Hyderabad</strong> to designing real-world electronics at <strong>Retron Energies</strong>. I enjoy taking an idea all the way through — sketch, schematic, board, firmware, and the bench where it finally comes alive.</p>
-            <p>When I'm not probing a circuit, I'm exploring new ideas on <a href="https://github.com/parusamanideep" target="_blank" rel="noopener" class="link">GitHub</a>.</p>
+            <p class="lead">I'm a <strong>ground segment systems engineer</strong> at <strong>Dhruva Space</strong>, with 4+ years building the link between satellites and the people who fly them.</p>
+            <p>My work spans the whole chain: <strong>requirements and architecture</strong>, <strong>SDR-based ground stations</strong> across VHF, UHF, S- and X-band, <strong>CCSDS-compliant TT&amp;C</strong>, <strong>DVB-S2 high-data-rate downlinks</strong>, RF link budgets, antennas, and the integration and testing that make a ground station ready for operations.</p>
+            <p>I've supported the <strong>Thybolt-1</strong> and <strong>Thybolt-2</strong> missions, and I'm currently designing high-throughput, multi-satellite downlink systems for LEO. I'm also a licensed ham radio operator.</p>
+            <div class="stats-row">
+              <div><strong class="count" data-count="4" data-suffix="+">0</strong><span class="mono">years in space industry</span></div>
+              <div><strong class="count" data-count="4">0</strong><span class="mono">RF bands · VHF UHF S X</span></div>
+              <div><strong class="count" data-count="2">0</strong><span class="mono">satellite missions supported</span></div>
+            </div>
           </div>
-          <div class="signal-chain reveal" aria-label="My design flow: idea, schematic, PCB, firmware, test">
-            <p class="mono chain-label">// my design flow</p>
+          <div class="signal-chain reveal" aria-label="My systems engineering flow: requirements, architecture, RF and SDR, integration, verification and validation">
+            <p class="mono chain-label">// how I build a ground segment</p>
             <ol class="chain">
-              <li><span class="chain-node">01</span><div><h4>Idea</h4><p>Requirements &amp; system block diagram</p></div></li>
-              <li><span class="chain-node">02</span><div><h4>Schematic</h4><p>Component selection &amp; circuit design</p></div></li>
-              <li><span class="chain-node">03</span><div><h4>PCB</h4><p>Layout, routing &amp; signal integrity</p></div></li>
-              <li><span class="chain-node">04</span><div><h4>Firmware</h4><p>Embedded code that drives the hardware</p></div></li>
-              <li><span class="chain-node">05</span><div><h4>Test</h4><p>Bench validation &amp; iteration</p></div></li>
+              <li><span class="chain-node">01</span><div><h4>Requirements</h4><p>System &amp; subsystem requirements tied to mission goals</p></div></li>
+              <li><span class="chain-node">02</span><div><h4>Architecture</h4><p>RF architecture, ICDs &amp; GSaaS interfaces</p></div></li>
+              <li><span class="chain-node">03</span><div><h4>RF &amp; SDR</h4><p>Link budgets, modems &amp; GNU Radio pipelines</p></div></li>
+              <li><span class="chain-node">04</span><div><h4>Integration</h4><p>Antennas, radios &amp; software brought together</p></div></li>
+              <li><span class="chain-node">05</span><div><h4>V&amp;V &amp; Ops</h4><p>System tests, then live satellite passes</p></div></li>
             </ol>
           </div>
         </div>
@@ -111,11 +117,44 @@
             <div class="t-dot"></div>
             <div class="card tilt">
               <div class="card-glow"></div>
-              <p class="mono t-tag">INTERNSHIP · WIRELESS</p>
-              <h3>5G Project Intern</h3>
+              <p class="mono t-tag">JAN 2023 – PRESENT · 3 YRS 11 MOS</p>
+              <h3>Dhruva Space</h3>
+              <p class="t-org">Satellite ground segment · Hyderabad</p>
+              <ol class="roles">
+                <li>
+                  <div class="role-head"><h4>Senior Associate – Ground Data Systems</h4><span class="mono">May 2026 – Present</span></div>
+                  <p>Designing high-throughput communication systems for multi-satellite downlink from LEO, and developing multi-channel synchronous modems.</p>
+                </li>
+                <li>
+                  <div class="role-head"><h4>Associate Systems Engineer</h4><span class="mono">Apr 2025 – May 2026</span></div>
+                  <p>Owned ground segment requirements, RF architecture, ICDs and GSaaS architecture. Led integration and V&amp;V campaigns, served as technical interface to suppliers, and bridged the RF, software, mechanical and AIT teams.</p>
+                </li>
+                <li>
+                  <div class="role-head"><h4>Radio Frequency Engineer</h4><span class="mono">Apr 2024 – Apr 2025</span></div>
+                  <p>Built a CCSDS-compliant full-duplex S-band TT&amp;C chain and a UHF TTC switching system. Implemented CCSDS and DVB-S2 mod/demod pipelines in GNU Radio on AD9361 SDRs, and ran RF link budgets and trade studies.</p>
+                </li>
+                <li>
+                  <div class="role-head"><h4>Avionics Engineer I</h4><span class="mono">Jun 2023 – Apr 2024</span></div>
+                  <p>Supported Thybolt-1 and Thybolt-2 mission operations. Designed multi-layer RF PCBs in Altium, built GMSK and FSK SDR flows, antenna rotator controllers, and UDP/TCP telemetry routing.</p>
+                </li>
+                <li>
+                  <div class="role-head"><h4>Ground Station Engineer – Intern</h4><span class="mono">Jan 2023 – Jun 2023</span></div>
+                  <p>Designed circularly polarised VHF/UHF Yagi-Uda antennas (YagiCAD, HFSS), tested them on a VNA, and characterised LNAs, filters and PAs.</p>
+                </li>
+              </ol>
+              <ul class="chips"><li>Systems Engineering</li><li>CCSDS</li><li>DVB-S2</li><li>GNU Radio</li><li>AD9361 SDR</li><li>Link Budgets</li><li>Altium</li><li>HFSS</li></ul>
+            </div>
+          </article>
+
+          <article class="t-item reveal">
+            <div class="t-dot"></div>
+            <div class="card tilt">
+              <div class="card-glow"></div>
+              <p class="mono t-tag">AUG 2022 – NOV 2022 · RESEARCH</p>
+              <h3>Project Intern</h3>
               <p class="t-org">Indian Institute of Technology, Hyderabad</p>
-              <p>Worked on a 5G research project, getting hands-on with next-generation wireless communication — the physical layer, signal processing, and how radios move data at high speed and low latency.</p>
-              <ul class="chips"><li>5G NR</li><li>Wireless Comm.</li><li>Signal Processing</li><li>MATLAB</li></ul>
+              <p>Trained under the Future Wireless Communications Research program. Worked with the QuickLogic EOS S3 FPGA and Symbiflow toolchain for low-power wireless IoT, built test cases for EOS S3 + ESP32 hardware, and validated wireless OTA flashing of the FPGA.</p>
+              <ul class="chips"><li>FPGA</li><li>ESP32</li><li>Wireless IoT</li><li>Linux</li><li>LaTeX</li></ul>
             </div>
           </article>
 
@@ -123,11 +162,11 @@
             <div class="t-dot"></div>
             <div class="card tilt">
               <div class="card-glow"></div>
-              <p class="mono t-tag">INTERNSHIP · HARDWARE</p>
-              <h3>Electronics Design Intern</h3>
-              <p class="t-org">Retron Energies Pvt. Ltd.</p>
-              <p>Designed and tested electronic circuits for energy products — a turning point that showed me how engineering decisions on the bench become products in the field.</p>
-              <ul class="chips"><li>Circuit Design</li><li>PCB Layout</li><li>Power Electronics</li><li>Testing</li></ul>
+              <p class="mono t-tag">APR 2022 – SEP 2022 · HARDWARE</p>
+              <h3>Electronics Design Engineer</h3>
+              <p class="t-org">EV Retron Energies India Pvt. Ltd.</p>
+              <p>Prototyped solid-state-relay switching for supercapacitor and Li-Po systems, wireless Peltier thermal control with H-bridges, and powertrain start-sequence circuits for E-Baja 2022 buggies. Built boards in KiCad on ATmega2560 and ESP32.</p>
+              <ul class="chips"><li>KiCad</li><li>Power Electronics</li><li>ATmega2560</li><li>ESP32</li><li>SMD Rework</li></ul>
             </div>
           </article>
 
@@ -135,11 +174,10 @@
             <div class="t-dot"></div>
             <div class="card tilt">
               <div class="card-glow"></div>
-              <p class="mono t-tag">EDUCATION</p>
-              <h3>B.Tech, Electronics &amp; Communication</h3>
-              <p class="t-org">B V Raju Institute of Technology</p>
-              <p>Built a foundation in analog &amp; digital electronics, communication systems, microcontrollers and electromagnetics. The time flew really fast!</p>
-              <ul class="chips"><li>Analog &amp; Digital</li><li>Microcontrollers</li><li>Communication Systems</li></ul>
+              <p class="mono t-tag">2019 – 2023 · EDUCATION</p>
+              <h3>B.Tech, Electronics &amp; Communication Engineering</h3>
+              <p class="t-org">B V Raju Institute of Technology (BVRIT)</p>
+              <p>Foundations in analog and digital electronics, communication systems, microcontrollers and electromagnetics, which led straight into RF and space.</p>
             </div>
           </article>
         </div>
@@ -152,46 +190,56 @@
         <h2 class="section-title reveal"><span class="mono num">03</span> What I do</h2>
         <div class="grid-cards">
           <div class="feature spotlight reveal">
-            <svg class="f-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 30v12M16 42h16M24 30a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"/><path class="wave w1" d="M15 17a13 13 0 0 1 18 0"/><path class="wave w2" d="M9 11a21 21 0 0 1 30 0"/></svg>
-            <h3>5G &amp; Wireless</h3>
-            <p>Physical-layer concepts, modulation schemes and radio links for next-gen networks.</p>
-          </div>
-          <div class="feature spotlight reveal">
-            <svg class="f-icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="8" width="32" height="32" rx="4"/><path d="M8 18h8l4-4h8M40 30h-8l-4 4h-8M18 40V30M30 8v10"/><circle cx="16" cy="18" r="2"/><circle cx="32" cy="30" r="2"/></svg>
-            <h3>PCB Design</h3>
-            <p>Schematic capture, multilayer layout, routing and design-for-manufacture.</p>
-          </div>
-          <div class="feature spotlight reveal">
-            <svg class="f-icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="14" y="14" width="20" height="20" rx="2"/><path d="M19 14V8M24 14V8M29 14V8M19 40v-6M24 40v-6M29 40v-6M14 19H8M14 24H8M14 29H8M40 19h-6M40 24h-6M40 29h-6"/></svg>
-            <h3>Embedded Systems</h3>
-            <p>Microcontroller firmware that reads sensors, drives actuators and talks over buses.</p>
+            <svg class="f-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M10 30a14 14 0 0 0 18-18Z"/><path d="M19 21 30 10"/><path d="M16 44h16M24 44v-8"/><path class="wave w1" d="M34 6a8 8 0 0 1 8 8"/><path class="wave w2" d="M34 1a13 13 0 0 1 13 13"/></svg>
+            <h3>Ground Segment Systems</h3>
+            <p>Requirements, architecture, ICDs and V&amp;V for multi-mission ground stations and GSaaS.</p>
           </div>
           <div class="feature spotlight reveal">
             <svg class="f-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M4 24h6l4-12 6 24 6-18 4 10 3-4h11"/></svg>
-            <h3>Signal Processing</h3>
-            <p>Filtering, spectral analysis and simulation in MATLAB &amp; Python.</p>
+            <h3>SDR &amp; GNU Radio</h3>
+            <p>AD9361-based modems, BPSK/QPSK/FSK/GMSK chains, and narrowband digitizers.</p>
+          </div>
+          <div class="feature spotlight reveal">
+            <svg class="f-icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="6" y="12" width="36" height="24" rx="3"/><path d="M12 30v-6M18 30V18M24 30v-9M30 30V16M36 30v-4"/></svg>
+            <h3>TT&amp;C &amp; HDR Downlinks</h3>
+            <p>CCSDS-compliant telemetry and telecommand, and DVB-S2 high-data-rate downlinks.</p>
           </div>
           <div class="feature spotlight reveal">
             <svg class="f-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M27 4 12 27h11l-3 17 16-24H25l2-16Z"/></svg>
-            <h3>Power Electronics</h3>
-            <p>Converters and power stages for energy-efficient hardware.</p>
+            <h3>RF Engineering</h3>
+            <p>Link budgets, trade studies, and characterising LNAs, filters and PAs on the bench.</p>
           </div>
           <div class="feature spotlight reveal">
-            <svg class="f-icon" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="5"/><circle cx="8" cy="10" r="3"/><circle cx="40" cy="10" r="3"/><circle cx="8" cy="38" r="3"/><circle cx="40" cy="38" r="3"/><path d="m10.5 12 9.5 8.5M37.5 12 28 20.5M10.5 36l9.5-8.5M37.5 36 28 27.5"/></svg>
-            <h3>IoT</h3>
-            <p>Connecting hardware to the cloud — sensing at the edge, insight in the network.</p>
+            <svg class="f-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M6 24h36M12 16v16M20 12v24M28 14v20M36 18v12"/><circle cx="42" cy="24" r="2"/></svg>
+            <h3>Antennas &amp; Tracking</h3>
+            <p>Circularly polarised Yagi-Uda design in HFSS, VNA testing, and rotator controllers for automated tracking.</p>
+          </div>
+          <div class="feature spotlight reveal">
+            <svg class="f-icon" viewBox="0 0 48 48" aria-hidden="true"><rect x="8" y="8" width="32" height="32" rx="4"/><path d="M8 18h8l4-4h8M40 30h-8l-4 4h-8M18 40V30M30 8v10"/><circle cx="16" cy="18" r="2"/><circle cx="32" cy="30" r="2"/></svg>
+            <h3>Hardware &amp; Software</h3>
+            <p>Multi-layer RF PCBs in Altium and KiCad, plus Python and C for bring-up, telemetry and test automation.</p>
           </div>
         </div>
 
         <div class="toolbox reveal">
           <p class="mono chain-label">// toolbox</p>
-          <div class="meters">
-            <div class="meter" data-level="85"><span>Circuit Design</span><div class="meter-bar"><i></i></div></div>
-            <div class="meter" data-level="80"><span>PCB Layout</span><div class="meter-bar"><i></i></div></div>
-            <div class="meter" data-level="78"><span>Wireless / 5G</span><div class="meter-bar"><i></i></div></div>
-            <div class="meter" data-level="75"><span>Embedded C</span><div class="meter-bar"><i></i></div></div>
-            <div class="meter" data-level="72"><span>MATLAB</span><div class="meter-bar"><i></i></div></div>
-            <div class="meter" data-level="70"><span>Python</span><div class="meter-bar"><i></i></div></div>
+          <ul class="chips tools">
+            <li>GNU Radio</li><li>AD9361 SDR</li><li>Python</li><li>C</li><li>Altium Designer</li><li>KiCad</li><li>Ansys HFSS</li><li>YagiCAD</li><li>Spectrum &amp; Vector Signal Analyzers</li><li>VNA</li><li>Signal Generators</li><li>UDP / TCP</li><li>Linux</li><li>LaTeX</li>
+          </ul>
+          <div class="creds">
+            <div>
+              <p class="mono chain-label">// publication</p>
+              <p class="cred-title">Ground Station with VHF and UHF band antenna to track satellites and testing with High Altitude Balloon (HAB) experiment</p>
+            </div>
+            <div>
+              <p class="mono chain-label">// certifications</p>
+              <ul class="cred-list">
+                <li>Ham Radio Licence</li>
+                <li>Introduction to the Internet of Things and Embedded Systems</li>
+                <li>Programming for Everybody</li>
+                <li>UiPath</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -201,30 +249,31 @@
     <section id="lab" class="section">
       <div class="container">
         <h2 class="section-title reveal"><span class="mono num">04</span> Signal Lab</h2>
-        <p class="section-intro reveal">A tiny interactive demo of what 5G radios deal with every millisecond. Each dot is a received symbol on a <strong>QAM constellation</strong> — drag the noise up and watch the signal fall apart.</p>
+        <p class="section-intro reveal">What a ground station modem sees during a satellite pass. Each dot is a received symbol on a <strong>constellation diagram</strong>. Turn the noise up and watch the link fall apart.</p>
         <div class="lab reveal">
           <div class="lab-screen">
-            <canvas id="constellation" aria-label="Animated QAM constellation diagram"></canvas>
-            <div class="lab-overlay mono"><span id="lab-mod">16-QAM</span><span id="lab-snr">SNR 24 dB</span></div>
+            <canvas id="constellation" aria-label="Animated constellation diagram"></canvas>
+            <div class="lab-overlay mono"><span id="lab-mod">QPSK</span><span id="lab-snr">SNR 24 dB</span></div>
           </div>
           <div class="lab-controls">
             <div class="control">
               <span class="label mono" id="mod-label">Modulation</span>
               <div class="seg" role="radiogroup" id="mod" aria-labelledby="mod-label">
-                <button role="radio" aria-checked="false" data-m="4">QPSK</button>
-                <button role="radio" aria-checked="true" data-m="16" class="on">16-QAM</button>
+                <button role="radio" aria-checked="false" data-m="2">BPSK</button>
+                <button role="radio" aria-checked="true" data-m="4" class="on">QPSK</button>
+                <button role="radio" aria-checked="false" data-m="16">16-QAM</button>
                 <button role="radio" aria-checked="false" data-m="64">64-QAM</button>
               </div>
             </div>
             <div class="control">
               <label class="mono" for="snr">Noise level · <span id="snr-val">24 dB SNR</span></label>
-              <input type="range" id="snr" min="4" max="36" value="24" />
+              <input type="range" id="snr" min="0" max="36" value="24" />
             </div>
             <div class="stats">
-              <div><span class="mono">bits / symbol</span><strong id="bps">4</strong></div>
+              <div><span class="mono">bits / symbol</span><strong id="bps">2</strong></div>
               <div><span class="mono">est. symbol errors</span><strong id="ser">0.0%</strong></div>
             </div>
-            <p class="lab-note">Higher-order QAM packs more bits into each symbol — that's how 5G hits gigabit speeds — but it needs a cleaner channel. Good hardware design is what keeps the noise down.</p>
+            <p class="lab-note">BPSK and QPSK keep TT&amp;C links robust at low SNR. Denser constellations carry more bits per symbol for high-data-rate downlinks, but only when the link budget leaves enough margin.</p>
           </div>
         </div>
       </div>
@@ -236,14 +285,16 @@
         <h2 class="section-title reveal"><span class="mono num">05</span> Get in touch</h2>
         <div class="contact-box reveal">
           <p class="contact-kicker mono">// open a channel</p>
-          <h3 class="contact-big">Let's build <span class="grad">something</span> together.</h3>
-          <p>I'd love to grow my network — whether it's a role, a project, or just a conversation about hardware and wireless.</p>
+          <h3 class="contact-big">Let's connect <span class="grad">space</span> and Earth.</h3>
+          <p>Open to conversations about ground segments, satellite communication, RF and SDR, whether it's a role, a collaboration or just talking shop.</p>
           <div class="contact-actions">
             <a href="mailto:parusamanideep@gmail.com" class="btn btn-primary magnetic"><span>parusamanideep@gmail.com</span></a>
+            <a href="https://www.linkedin.com/in/manideep-parusha" target="_blank" rel="noopener" class="btn btn-ghost magnetic"><span>LinkedIn ↗</span></a>
             <button class="btn btn-ghost magnetic copy-email" data-email="parusamanideep@gmail.com"><span>Copy email</span></button>
           </div>
           <ul class="contact-meta mono">
-            <li><span>LOC</span> Patancheru, Hyderabad, Telangana · India</li>
+            <li><span>LOC</span> Hyderabad, Telangana · India</li>
+            <li><span>LNK</span> <a href="https://www.linkedin.com/in/manideep-parusha" target="_blank" rel="noopener">linkedin.com/in/manideep-parusha</a></li>
             <li><span>GIT</span> <a href="https://github.com/parusamanideep" target="_blank" rel="noopener">github.com/parusamanideep</a></li>
           </ul>
         </div>
@@ -253,7 +304,7 @@
 
   <footer class="footer mono">
     <p>© <span id="year"></span> Manideep Parusha</p>
-    <p>Designed &amp; built by MP · <a href="#top">Back to top ↑</a></p>
+    <p><a href="https://www.linkedin.com/in/manideep-parusha" target="_blank" rel="noopener">LinkedIn</a> · <a href="https://github.com/parusamanideep" target="_blank" rel="noopener">GitHub</a> · <a href="#top">Back to top ↑</a></p>
   </footer>
 
   <div class="toast mono" role="status" aria-live="polite"></div>
