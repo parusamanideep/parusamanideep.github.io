@@ -12,10 +12,10 @@
   /* ---------------- Boot loader ---------------- */
   const loader = $('.loader');
   const bootLines = [
-    '> powering rails ........ 3V3 OK',
-    '> clock PLL ............. LOCKED',
-    '> RF front-end .......... n78 READY',
-    '> handshake gNB ......... ATTACHED',
+    '> antenna rotator ....... HOMED',
+    '> SDR AD9361 ............ CONFIGURED',
+    '> S-band TT&C chain ..... READY',
+    '> awaiting AOS .......... CARRIER LOCK',
     '> loading portfolio ..... 100%'
   ];
   function finishBoot() {
@@ -69,7 +69,7 @@
   $$('.scramble').forEach(el => el.addEventListener('mouseenter', () => !reduced && scramble(el, true)));
 
   /* ---------------- Typed roles ---------------- */
-  const roles = ['Electronics Design Engineer', '5G & Wireless Enthusiast', 'PCB & Embedded Systems Builder', 'Signal Processing Explorer'];
+  const roles = ['Ground Station Systems Engineer', 'Satellite Communication Systems', 'RF Engineer · SDR · GNU Radio', 'Connecting Space and Earth'];
   function startTyping() {
     const el = $('.typed');
     if (reduced) { el.textContent = roles[0]; return; }
@@ -262,13 +262,16 @@
 
     function setM(m) {
       M = m; ideal = [];
-      const k = Math.sqrt(M);
-      for (let i = 0; i < k; i++) for (let j = 0; j < k; j++) ideal.push([(2 * i - (k - 1)), (2 * j - (k - 1))]);
+      if (M === 2) ideal = [[-1, 0], [1, 0]];
+      else {
+        const k = Math.sqrt(M);
+        for (let i = 0; i < k; i++) for (let j = 0; j < k; j++) ideal.push([(2 * i - (k - 1)), (2 * j - (k - 1))]);
+      }
       const es = ideal.reduce((s, [a, b]) => s + a * a + b * b, 0) / M;
       const norm = Math.sqrt(es);
       ideal = ideal.map(([a, b]) => [a / norm, b / norm]);
       pts = []; recent.length = 0;
-      $('#lab-mod').textContent = M === 4 ? 'QPSK' : M + '-QAM';
+      $('#lab-mod').textContent = M === 2 ? 'BPSK' : M === 4 ? 'QPSK' : M + '-QAM';
       $('#bps').textContent = Math.log2(M);
     }
     function gauss() { let u = 0, v = 0; while (!u) u = Math.random(); while (!v) v = Math.random(); return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * v); }
@@ -347,7 +350,7 @@
     }));
     slider.addEventListener('input', () => { updateSnr(); recent.length = 0; });
 
-    setM(16); updateSnr(); resize();
+    setM(+$('#mod button.on').dataset.m); updateSnr(); resize();
     window.addEventListener('resize', resize);
     if (reduced) { addSymbols(600); draw(); return; }
     new IntersectionObserver(([e]) => { const was = visible; visible = e.isIntersecting; if (visible && !was) requestAnimationFrame(loop); }).observe(c);
@@ -361,6 +364,16 @@
       $$('.meter', e.target).forEach(m => {
         $('i', m).style.width = m.dataset.level + '%';
         countUp($('span', m), +m.dataset.level);
+      });
+      $$('.count', e.target).forEach(el => {
+        const to = +el.dataset.count, suf = el.dataset.suffix || '', t0 = performance.now();
+        if (reduced) { el.textContent = to + suf; return; }
+        const step = now => {
+          const k = Math.min(1, (now - t0) / 1400);
+          el.textContent = Math.round(to * (1 - Math.pow(1 - k, 3))) + suf;
+          if (k < 1) requestAnimationFrame(step);
+        };
+        requestAnimationFrame(step);
       });
       revealIO.unobserve(e.target);
     }
